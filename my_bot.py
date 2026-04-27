@@ -30,6 +30,10 @@ def datekaka(message):
     b = a.strftime('%H:%M')
     bot.send_message(message.chat.id, f'now is:\n{b}')
 
+@bot.message_handler(commands=['bye'])
+def bye(message):
+    bot.send_message(message.chat.id, "Byee my friend!!" )
+
 
 bot.polling(none_stop=True)
 
